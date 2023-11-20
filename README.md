@@ -1,4 +1,4 @@
-# lldb-zig-bug
+# lldb-uefi-qemu-crash 
 
 To replicate, you need QEMU, Zig, and (obviously) LLDB installed.
 
