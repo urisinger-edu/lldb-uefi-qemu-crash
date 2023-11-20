@@ -20,3 +20,4 @@ target create --no-dependents ./zig-out/EFI/BOOT/bootx64.efi --symfile ./zig-out
 target modules load --file bootx64.efi --slide <image-base>
 gdb-remote 1234
 ```
+Replace <image-base> with the actual image base address.
