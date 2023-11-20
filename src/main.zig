@@ -23,6 +23,7 @@ pub fn main() void {
     const guid: uefi.Guid = uefi.protocols.LoadedImageProtocol.guid;
     _ = uefi.system_table.boot_services.?.handleProtocol(uefi.handle, @alignCast(&guid), @ptrCast(&loaded_image));
 
+    _ = uefi.system_table.con_out.?.clearScreen();
     stdout.print("Image base: 0x{x}\n", .{@intFromPtr(loaded_image.*.image_base)}) catch unreachable;
 
     var wait = true;
